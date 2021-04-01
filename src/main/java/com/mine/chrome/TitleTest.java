@@ -18,7 +18,7 @@ public class TitleTest {
 
     @BeforeClass
     public void beforeClass() {
-    	System.setProperty("webdriver.chrome.driver","C:\\MyInstalls\\Selenium\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver","lib\\chromedriver.exe");
     	ChromeOptions chromeOptions = new ChromeOptions();
     	chromeOptions.addArguments("--headless");
         driver = new ChromeDriver(chromeOptions);

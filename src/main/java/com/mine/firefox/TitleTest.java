@@ -18,7 +18,7 @@ public class TitleTest {
 
     @BeforeClass
     public void beforeClass() {
-    	System.setProperty("webdriver.gecko.driver","C:\\MyInstalls\\Selenium\\geckodriver.exe");
+    	System.setProperty("webdriver.gecko.driver","lib\\geckodriver.exe");
     	FirefoxOptions options = new FirefoxOptions(); 
     	options.setHeadless(true);
         driver = new FirefoxDriver(options);
