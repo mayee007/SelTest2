@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
@@ -18,7 +19,9 @@ public class TitleTest {
     @BeforeClass
     public void beforeClass() {
     	System.setProperty("webdriver.gecko.driver","C:\\MyInstalls\\Selenium\\geckodriver.exe");
-        driver = new FirefoxDriver();
+    	FirefoxOptions options = new FirefoxOptions(); 
+    	options.setHeadless(true);
+        driver = new FirefoxDriver(options);
     }
 
     @AfterClass
