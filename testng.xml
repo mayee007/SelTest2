@@ -2,6 +2,7 @@
 <suite parallel="false" name="Suite">
   <test name="Test">
     <classes>
+      <class name="com.mine.SearchPageTest"/>
       <class name="com.mine.TitleTest"/>
     </classes>
   </test> <!-- Test -->

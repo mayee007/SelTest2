@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class TitleTest {
+public class SearchPageTest {
 	private WebDriver driver;
 
     @BeforeClass
@@ -33,14 +33,12 @@ public class TitleTest {
 
         driver.get("http://www.google.com");
 
-        // get the actual value of the title
-        String actualTitle = driver.getTitle();
-        
-        String expectedTitle = "Google";
+        String search_text = "Google Search";
+        WebElement search_button = driver.findElement(By.name("btnK"));
 
-        Assert.assertEquals(expectedTitle, actualTitle, "Title doesn't match");
-        
-        
+        String text = search_button.getAttribute("value");
+
+        Assert.assertEquals(text, search_text, "Text not found!");
     }
 
 }
