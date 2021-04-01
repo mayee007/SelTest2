@@ -2,8 +2,10 @@
 <suite parallel="false" name="Suite">
   <test name="Test">
     <classes>
-      <class name="com.mine.SearchPageTest"/>
-      <class name="com.mine.TitleTest"/>
+      <class name="com.mine.firefox.SearchPageTest"/>
+      <class name="com.mine.firefox.TitleTest"/>
+      <class name="com.mine.chrome.SearchPageTest"/>
+      <class name="com.mine.chrome.TitleTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

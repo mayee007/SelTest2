@@ -1,4 +1,4 @@
-package com.mine;
+package com.mine.firefox;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
