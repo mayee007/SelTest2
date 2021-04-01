@@ -1,0 +1,7 @@
+.settings
+target
+.project
+.gitignore.swp
+.classpath
+test-output
+
