@@ -10,5 +10,6 @@
       <class name="com.mine.edge.SearchPageTest"/> -->
       <class name="com.mine.unix.edge.TitleTest"/>
     </classes>
+
   </test> <!-- Test -->
 </suite> <!-- Suite -->
