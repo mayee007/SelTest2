@@ -2,10 +2,13 @@
 <suite parallel="false" name="Suite">
   <test name="Test">
     <classes>
-      <class name="com.mine.firefox.SearchPageTest"/>
+      <!--  <class name="com.mine.firefox.SearchPageTest"/>
       <class name="com.mine.firefox.TitleTest"/>
       <class name="com.mine.chrome.SearchPageTest"/>
       <class name="com.mine.chrome.TitleTest"/>
+      <class name="com.mine.edge.TitleTest"/>
+      <class name="com.mine.edge.SearchPageTest"/> -->
+      <class name="com.mine.unix.edge.TitleTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
