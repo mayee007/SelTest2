@@ -8,8 +8,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -38,7 +36,7 @@ public class TitleTest {
     }
 
     @Test
-    public void verifySearchButton() {
+    public void googleTitleTestn() {
 
     	System.out.println("inside google test"); 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -56,4 +54,22 @@ public class TitleTest {
         
     }
 
+    @Test
+    public void yahooTitleTest() {
+
+    	System.out.println("inside yahoo test"); 
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver.get("http://www.yahoo.com");
+
+        // get the actual value of the title
+        String actualTitle = driver.getTitle();
+        
+        String expectedTitle = "Ygoo";
+
+        System.out.println("expected = "+ expectedTitle + ", actual = " + actualTitle); 
+        Assert.assertEquals(expectedTitle, actualTitle, "Title doesn't match");
+        
+        
+    }
 }
