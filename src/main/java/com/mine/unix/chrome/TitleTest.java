@@ -8,7 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
@@ -18,11 +20,14 @@ public class TitleTest {
     @BeforeClass
     public void beforeClass() {
     	String remoteURL = "http://localhost:4444"; 
-    	//System.setProperty("webdriver.chrome.driver","lib/chromedriver");
     	ChromeOptions chromeOptions = new ChromeOptions();
     	chromeOptions.addArguments("--headless");
+    	 
+    	System.setProperty("webdriver.chrome.driver","lib\\chromedriver.exe");
+    	
     	try { 
-    		driver = new RemoteWebDriver(new URL(remoteURL), chromeOptions);
+    		//driver = new RemoteWebDriver(new URL(remoteURL), chromeOptions);
+    		driver = new ChromeDriver(chromeOptions);
     		System.out.println("Driver info " +driver);
     	}
     	catch(Exception e) {
@@ -36,7 +41,7 @@ public class TitleTest {
     }
 
     @Test
-    public void googleTitleTestn() {
+    public void googleTitleTest() {
 
     	System.out.println("inside google test"); 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
