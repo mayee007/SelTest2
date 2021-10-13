@@ -46,7 +46,7 @@ public class TitleTest {
         // get the actual value of the title
         String actualTitle = driver.getTitle();
         
-        String expectedTitle = "Google";
+        String expectedTitle = "Gogle";
 
         Assert.assertEquals(expectedTitle, actualTitle, "Title doesn't match");
         
