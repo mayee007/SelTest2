@@ -25,6 +25,7 @@ public class TitleTest {
     	chromeOptions.addArguments("--headless");
     	try { 
     		driver = new RemoteWebDriver(new URL(remoteURL), chromeOptions);
+    		System.out.println("Driver info " +driver);
     	}
     	catch(Exception e) {
     		System.out.println("----- Exception " +e);
@@ -39,6 +40,7 @@ public class TitleTest {
     @Test
     public void verifySearchButton() {
 
+    	System.out.println("inside google test"); 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://www.google.com");
@@ -48,6 +50,7 @@ public class TitleTest {
         
         String expectedTitle = "Gogle";
 
+        System.out.println("expected = "+ expectedTitle + ", actual = " + actualTitle); 
         Assert.assertEquals(expectedTitle, actualTitle, "Title doesn't match");
         
         
