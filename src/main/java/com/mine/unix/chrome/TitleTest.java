@@ -23,11 +23,11 @@ public class TitleTest {
     	ChromeOptions chromeOptions = new ChromeOptions();
     	chromeOptions.addArguments("--headless");
     	 
-    	System.setProperty("webdriver.chrome.driver","lib\\chromedriver.exe");
+    	//System.setProperty("webdriver.chrome.driver","lib\\chromedriver.exe");
     	
     	try { 
-    		//driver = new RemoteWebDriver(new URL(remoteURL), chromeOptions);
-    		driver = new ChromeDriver(chromeOptions);
+    		driver = new RemoteWebDriver(new URL(remoteURL), chromeOptions);
+    		//driver = new ChromeDriver(chromeOptions);
     		System.out.println("Driver info " +driver);
     	}
     	catch(Exception e) {
