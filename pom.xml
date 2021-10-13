@@ -17,6 +17,11 @@
   		<version>${sel.version}</version>
   	</dependency>
   	<dependency>
+  		<groupId>org.seleniumhq.selenium</groupId>
+  		<artifactId>selenium-remote-driver</artifactId>
+  		<version>${sel.version}</version>
+  	</dependency>
+  	<dependency>
   		<groupId>org.testng</groupId>
   		<artifactId>testng</artifactId>
   		<version>${testng.version}</version>

@@ -3,9 +3,10 @@ package com.mine.unix.chrome;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,10 +19,16 @@ public class TitleTest {
 
     @BeforeClass
     public void beforeClass() {
-    	System.setProperty("webdriver.chrome.driver","lib/chromedriver");
+    	String remoteURL = "http://localhost:4444"; 
+    	//System.setProperty("webdriver.chrome.driver","lib/chromedriver");
     	ChromeOptions chromeOptions = new ChromeOptions();
     	chromeOptions.addArguments("--headless");
-        driver = new ChromeDriver(chromeOptions);
+    	try { 
+    		driver = new RemoteWebDriver(new URL(remoteURL), chromeOptions);
+    	}
+    	catch(Exception e) {
+    		System.out.println("----- Exception " +e);
+    	}
     }
 
     @AfterClass
