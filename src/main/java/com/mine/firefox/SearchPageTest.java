@@ -36,12 +36,12 @@ public class SearchPageTest {
 
         driver.get("http://www.google.com");
 
-        String search_text = "Google Search";
+        String search_text = "Search";
         WebElement search_button = driver.findElement(By.name("btnK"));
 
-        String text = search_button.getAttribute("value");
+        String actual = search_button.getAttribute("value");
 
-        Assert.assertEquals(text, search_text, "Text not found!");
+        Assert.assertTrue(actual.contains(search_text));
     }
 
 }

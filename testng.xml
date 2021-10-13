@@ -8,7 +8,7 @@
       <class name="com.mine.chrome.TitleTest"/>
       <class name="com.mine.edge.TitleTest"/>
       <class name="com.mine.edge.SearchPageTest"/> -->
-      <class name="com.mine.unix.edge.TitleTest"/>
+      <class name="com.mine.unix.chrome.TitleTest"/>
     </classes>
 
   </test> <!-- Test -->
